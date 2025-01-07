@@ -27,7 +27,7 @@ $(LDIR)/pumiAIM.so: $(ODIR)/pumiAIM.o \
 			$(LDIR)/libutils.a $(LDIR)/libaimUtil.a $(OBJS) $(OBJSP)
 	$(CXX) $(SOFLGS) -o $(LDIR)/pumiAIM.so $(ODIR)/pumiAIM.o \
 		$(OBJS) $(OBJSP) -L$(PUMI_LDIR) -L$(LDIR) -lutils \
-		-laimUtil -locsm -legads -ludunits2 $(RPATH) $(CPPSLB) -lm \
+		-laimUtil -locsm -legads -ludunits2 $(RPATH) $(CPPSLB) -lm -ldl \
 		-lapf -lapf_zoltan -lcrv -lgmi -lgmi_egads -llion -lma -lmds -lmth \
 		-lparma -lpcu -lph -lpumi -lsam -lspr -Wl,-rpath,$(PWD)/$(PUMI_LDIR) \
 		-lapf -lapf_zoltan -lcrv -lgmi -lgmi_egads -llion -lma -lmds -lmth \
